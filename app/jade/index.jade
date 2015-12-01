@@ -1,0 +1,46 @@
+html(ng-app="workshop")
+  head
+    title Gulp Study
+    meta(charset="utf-8")
+    meta(description="desc")
+    meta(name="viewport" content="initial-scale=1")
+    link(rel="stylesheet", href="styles/main.css")
+
+  body
+    .header
+      .page-center
+        img.logo(src="images/heder-dummy.png")
+
+    .main-content
+      .page-center(ng-controller="mainController")
+
+        .post-record(ng-repeat="data in feedData")
+
+          .post-header
+            .profile
+              img(ng-src="{{data.profilePictureUrl}}")
+              .user-name {{data.userName}}
+            .date
+              {{data.created}}
+
+          img.post-image(ng-src="{{data.imageUrl}}")
+
+          .post-info
+            .likes いいね！ {{data.likes}}件
+
+            .messages
+              .user-name {{data.userName}}
+              .text {{data.text}}
+
+            .feedback
+              // Likeの状態で表示を変更
+              img.like(ng-if="data.isLike === false" src="images/like.png", ng-click="data.isLike = true")
+              img.like(ng-if="data.isLike === true" src="images/like_active.png", ng-click="data.isLike = false")
+
+              form.comment-creator
+                input(placeholder="コメントを追加…")
+
+              .more-action
+                img(src="images/more_action.png")
+
+    script(src="main.js")

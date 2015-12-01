@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: proxima-nova, "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+}
+
+.page-center {
+    width: 600px;
+    margin: 0 auto;
+    padding: 18px 0;
+}
+
+.header {
+    border-bottom: 1px solid #edeeee;
+    background-color: #fff;
+    .logo {
+        margin-left: -5px;
+    }
+}
+
+.main-content {
+    background-color: #fafafa;
+
+    .post-record {
+        margin-bottom: 30px;
+        border: 1px solid #edeeee;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+
+    .post-header {
+        height: 64px;
+        padding: 17px 20px;
+        border-bottom: 1px solid #edeeee;
+
+        img {
+            float: left;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #cccfd0;
+            border-radius: 50%;
+        }
+
+        .user-name {
+            font-size: 15px;
+            line-height: 30px;
+            float: left;
+            margin-left: 10px;
+            color: #125688;
+        }
+
+        .date {
+            font-size: 12px;
+            line-height: 30px;
+            float: right;
+            color: #a5a7aa;
+        }
+    }
+
+    .post-image {
+        max-width: 100%;
+        border-bottom: 1px solid #edeeee;
+    }
+
+    .likes {
+        font-size: 12px;
+        font-weight: bold;
+        margin: 14px;
+        color: #4b4f54;
+    }
+
+    .messages {
+        margin-bottom: 13px;
+        margin-left: 14px;
+    }
+
+    .user-name {
+        font-size: 15px;
+        float: left;
+        margin-right: 5px;
+        color: #125688;
+    }
+
+    .feedback {
+        margin-left: 14px;
+        padding-top: 10px;
+        padding-right: 10px;
+        border-top: 1px solid #edeeee;
+
+        .like {
+            float: left;
+        }
+
+        .comment-creator {
+            float: left;
+            margin-top: 4px;
+            margin-left: 10px;
+
+            input {
+                line-height: 17px;
+                margin-left: 10px;
+                border: 0;
+            }
+        }
+
+        .more-action {
+            float: right;
+        }
+    }
+
+    .feedback:after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
